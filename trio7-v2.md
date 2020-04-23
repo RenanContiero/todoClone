@@ -24,4 +24,3 @@ Link do Projeto: https://github.com/lookfire/todoClone
 - [JavaScript](https://www.javascript.com)
 - [HTML](https://www.w3.org)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
-<! - - [Buzz!] (Https://buzz.jaysalvat.com) ->
