@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Todo } from '../models/todo';
 
 @Component({
   selector: 'app-display',
@@ -7,8 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DisplayComponent implements OnInit {
 
-
-  valorAtual:any
 
   status:boolean;
   title = 'Ajustar Tarefas';
@@ -32,13 +31,19 @@ export class DisplayComponent implements OnInit {
 
   editarItem(item) {
     let index: number = this.todos.indexOf(item);
-     let newValor = window.prompt("Digite o novo valor:");
-     this.valorAtual = newValor;
-     console.log(newValor)
+    this.todos.splice(index, 1);
+    if(this.todos.indexOf(item) != 0){
+      let newValor = window.prompt("Digite o novo valor:");
+      let status = false;
+     this.todos.push(new Todo(index,newValor, status));
+      console.log(newValor)
+    }else{ 
+     console.log("Erro")
+    }
 
-    // if (this.todos.length == 0) {
-      // this.show = false;
-    // }
+    //  let nome = this.nomeTarefa;
+    //  let status = false;
+    //  this.todos.push(new Todo(nome, status));
   }
 
   // markAsDone() {

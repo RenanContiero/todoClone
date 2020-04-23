@@ -6,7 +6,7 @@
         <button *ngIf="!item.status" (click)="markAsDone(item)"><i  class="far fa-check-circle"></i></button>
         <button *ngIf="item.status"(click)="markAsUndone(item)"><i  class="fas fa-check-circle"></i></button>
 <!-- -------------------------------------->
-        <button name="btnEditar" (click)="editarItem(item)" ><i class="fas fa-edit"></i></button>
+        <button (click)="editarItem(item)" ><i class="fas fa-edit"></i></button>
 <!-- --------------------------------->
         <!-- <button (click)="markAsDone()"><i [ngClass]="item.status ? 'fas fa-check-circle' : 'far fa-check-circle'"></i></button> -->
         

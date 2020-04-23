@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Todo } from '../models/todo';
 
 @Component({
@@ -8,10 +8,13 @@ import { Todo } from '../models/todo';
 })
 export class AdditemComponent implements OnInit {
 
+  
   // @Input() valorAtualizado:any; 
-  nomeTarefa:string;
+  // novoObjeto = {}
 
+  nomeTarefa:string;
   controle:number = 0
+
   constructor() { }
 
   ngOnInit(): void { 
@@ -30,15 +33,16 @@ export class AdditemComponent implements OnInit {
      alert("Digite uma tarefa")
    }else{
      let nome = this.nomeTarefa;
-
      let status = false;
-     this.todos.push(new Todo(nome, status));
-     
+     let n:number = 0
+     let id:number = n+1
+     this.todos.push(new Todo(id,nome, status));
+
    }
   } 
   // atualizarItem(){
-  //   this.todos.get(nome) = valorAtual;
-  //   this.nomeTarefa = valorAtual;
-  //   console.log(this.nomeTarefa);
+  //   let status = false;
+  //   this.novoObjeto = new Todo(this.valorAtualizado, status);
+  //   console.log("estou mostrando pela função");
   // }
 }
