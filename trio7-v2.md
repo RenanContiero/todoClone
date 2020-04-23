@@ -17,11 +17,11 @@ Nomes: Lucas Alexandre, Matheus e Renan Carvalho
 
 Link do Projeto: https://github.com/lookfire/todoClone
 
-###: computer: Tecnologias
+### :computer: Technologies
 
-- [Angular] (https://angular.io)
-- [TypeScript] (https://www.typescriptlang.org)
-- [JavaScript] (https://www.javascript.com)
-- [HTML] (https://www.w3.org)
-- [CSS] (https://www.w3.org/Style/CSS/Overview.en.html)
+- [Angular](https://angular.io)
+- [TypeScript](https://www.typescriptlang.org)
+- [JavaScript](https://www.javascript.com)
+- [HTML](https://www.w3.org)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 <! - - [Buzz!] (Https://buzz.jaysalvat.com) ->
