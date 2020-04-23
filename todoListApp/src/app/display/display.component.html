@@ -3,8 +3,13 @@
     <ol id="card">
       <!-- Operação que faz o data binding dos valores adicionados no array e passados através do decorator -->
       <li *ngFor="let item of todos">{{item.nome}}
-        <button (click)="markAsDone()"><i [ngClass]="item.status ? 'fas fa-check-circle' : 'far fa-check-circle'"></i></button>
+        <button *ngIf="!item.status" (click)="markAsDone(item)"><i  class="far fa-check-circle"></i></button>
+        <button *ngIf="item.status"(click)="markAsUndone(item)"><i  class="fas fa-check-circle"></i></button>
+<!-- -------------------------------------->
+        <button name="btnEditar" (click)="editarItem(item)" ><i class="fas fa-edit"></i></button>
+<!-- --------------------------------->
         <!-- <button (click)="markAsDone()"><i [ngClass]="item.status ? 'fas fa-check-circle' : 'far fa-check-circle'"></i></button> -->
+        
         <button (click)="removerItem(item)" ><i class="far fa-trash-alt"></i></button> 
       </li>
     </ol>

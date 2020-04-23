@@ -7,8 +7,8 @@
 }
 #buttonAdd{
     border-radius: 8px;
-    padding: 8px;
-    border: none;
+    padding: 8px; 
+    border: none; 
     margin: 0 10px;
     cursor: pointer;
 }
@@ -19,16 +19,18 @@
     border-radius: 8px;
     padding: 8px;
     border: none;
-    cursor: pointer;
+    cursor: pointer; 
 }
 #refresh:hover{
     background-color: lightgray;
 }
+
 .fa-plus-circle{
     font-size: 22px;
     color: rgb(144, 30, 238);
 }
-.fa-cloud-upload-alt{
+.fa-cloud-upload-alt{ 
     font-size: 22px;
     color: rgb(195, 43, 233);
 }
+

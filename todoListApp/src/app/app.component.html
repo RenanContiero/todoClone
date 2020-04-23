@@ -1,6 +1,6 @@
 <h1>{{titleIndex}}</h1>
-<app-additem #add></app-additem>
-<app-display [todos]="add.todos"></app-display>
+<app-additem #add [valorAtualizado]="tela.valorAtual" ></app-additem>
+<app-display #tela [todos]="add.todos" ></app-display>
 
 <router-outlet></router-outlet>
 
