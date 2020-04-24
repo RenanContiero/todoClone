@@ -31,19 +31,20 @@ export class DisplayComponent implements OnInit {
 
   editarItem(item) {
     let index: number = this.todos.indexOf(item);
-    this.todos.splice(index, 1);
-    if(this.todos.indexOf(item) != 0){
-      let newValor = window.prompt("Digite o novo valor:");
-      let status = false;
-     this.todos.push(new Todo(index,newValor, status));
-      console.log(newValor)
-    }else{ 
-     console.log("Erro")
-    }
-
-    //  let nome = this.nomeTarefa;
-    //  let status = false;
-    //  this.todos.push(new Todo(nome, status));
+    let status = false;
+    let newValor = prompt("Digite o novo valor:");
+    item.nome = newValor
+   console.log(item.nome)
+    // let index: number = this.todos.indexOf(item);
+    // this.todos.splice(index, 1);
+    // if(this.todos.indexOf(item) != 0){
+    //   let newValor = window.prompt("Digite o novo valor:");
+    //   let status = false;
+    //  this.todos.push(new Todo(index,newValor, status));
+    //   console.log(newValor)
+    // }else{ 
+    //  console.log("Erro")
+    // }
   }
 
   // markAsDone() {
