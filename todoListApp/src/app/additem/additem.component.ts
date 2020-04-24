@@ -25,6 +25,7 @@ export class AdditemComponent implements OnInit {
 
   guardaTarefa(event){
     this.nomeTarefa = event.target.value
+   
   }
 
   //adiciona o item como o primeiro do array
@@ -34,8 +35,7 @@ export class AdditemComponent implements OnInit {
    }else{
      let nome = this.nomeTarefa;
      let status = false;
-     let n:number = 0
-     let id:number = n+1
+     let id:number = +1
      this.todos.push(new Todo(id,nome, status));
 
    }

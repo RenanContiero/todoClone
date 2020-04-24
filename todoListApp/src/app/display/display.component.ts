@@ -9,7 +9,7 @@ import { Todo } from '../models/todo';
 export class DisplayComponent implements OnInit {
 
 
-  status:boolean;
+  status: boolean;
   title = 'Ajustar Tarefas';
   show: boolean = true;
 
@@ -31,10 +31,13 @@ export class DisplayComponent implements OnInit {
 
   editarItem(item) {
     let index: number = this.todos.indexOf(item);
-    let status = false;
-    let newValor = prompt("Digite o novo valor:");
-    item.nome = newValor
-   console.log(item.nome)
+    let newValor
+    if (newValor = window.prompt("Digite o novo valor:")) {
+      item.nome = newValor
+    } else {
+      item.nome = item.nome
+    }
+    //  console.log(item.nome)
     // let index: number = this.todos.indexOf(item);
     // this.todos.splice(index, 1);
     // if(this.todos.indexOf(item) != 0){
@@ -55,11 +58,11 @@ export class DisplayComponent implements OnInit {
   //   }
   // }
 
-  markAsDone(todo){
+  markAsDone(todo) {
     todo.status = true;
   }
- 
-  markAsUndone(todo){
+
+  markAsUndone(todo) {
     todo.status = false;
   }
 }
