@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { AdditemComponent } from './additem/additem.component';
 import { DisplayComponent } from './display/display.component';
 import { EditemComponent } from './editem/editem.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
+import { ApiService } from './api.service';
+
 
 @NgModule({
   declarations: [
@@ -17,9 +21,11 @@ import { EditemComponent } from './editem/editem.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
